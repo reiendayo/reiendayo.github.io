@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 #header {
   background: black;
@@ -8,8 +8,9 @@
 
 
 
-.link-socials > * {
-  vertical-align: middle
+.link-socials {
+/*   vertical-align: bottom;*/
+  margin: 0.4em;
 }
 
 .link-socials > img {
@@ -18,7 +19,8 @@
   margin-left: 0.2em;
 }
 
-
+#contacts  header div > a {
+  color: #999; }
 
 
 section.main.style3 {
@@ -31,20 +33,25 @@ section.main.style3 {
 
 
 
-#intro {
-  background: none;
+/* #intro { */
+/*   background: none; */
 /*   background: url(../../"images/#000.webp"), url("../../arts/illust/remake bond_001.webp") !important; */
 /*   background: url("../../arts/illust/remake bond_001.webp") !important; */
 /*   background-size: 100% 100%, cover !important; */
 
-  filter: brightness(80%);
-  overflow: hidden
-}
+/*   filter: brightness(80%); */
+  
+/* } */
 
 
 
 #intro h2 {
 /*   backdrop-filter: brightness(150%) */
+  font-family: 'Montserrat';
+  font-size: 440%
+/*   font-weight: bold; */
+  
+  
 }
 /* #intro > .content {
   width: 100% !important;
@@ -52,61 +59,91 @@ section.main.style3 {
   background: black;
 } */
 
+#intro {
+  background: linear-gradient(#0002,#000e), url("../../arts/illust/remake bond_001.webp") !important;
+  background-size: auto 100%, cover !important;
+  background-position-x: 70% !important;
+  object-position: center !important;
+  overflow: hidden;
+}
 
-
-#intro > img:nth-child(1) {
-/*   background: url(../../"images/#000.webp"), url("../../arts/illust/remake bond_001.webp") !important; */
-/*   background: url("../../arts/illust/ella with wings_001.webp") !important; */
-/*   background-size: 100% 100% !important; */
-  position: absolute;
+#intro > img {
+  display: none
+/*   position: absolute;
   left: 0;
-  width: 100%;
-/*   object-fit: fill; */
-/*   background-origin: border-box; */
-/*   object-position: 0 30px; */
-
-  filter: brightness(60%);
+  width:  100%;
+  height: 100%;
+  object-fit: fill;
+  filter: brightness(60%); */
+}
+#intro header h2 {
+/*   display: none; */
+/*   position: absolute; */
+/*   z-index: 20 */
+/*   color: white; */
+/*   backdrop-filter: grayscale(100%) brightness(200%); */
 }
 
 
+@media screen and (max-width: 736px) {
+  #one {
+/*   background-size: auto 150% !important; */
+/*   background-size: auto 0%, 0% !important; */
+/*     filter: brightness(900%); */
+    
+/*   background-position-x: 20px !important; */
+  }
+}
 
-#one > img:nth-child(1) {
+
+#one {
+/*   position: absolute; */
+  background: linear-gradient(#0002,#000d), url("../../arts/character_design/ren_rei.webp") !important;
+/*   background-size: auto 100%, cover !important; */
+  background-size: auto 100%, cover !important;
+  background-position-y: 50% !important;
+  object-position: center !important;
+  
+}
+/* #one > img:nth-child(1) {
+  display: none;
   position: absolute;
   left: 0;
   width: 50%;
   filter: brightness(60%);
 }
-
 #one > img:nth-child(2) {
+  display: none;
   position: absolute;
   left: 50%;
   width: 50%;
   filter: brightness(60%);
-}
+} */
 
 #one > .content.box {
-  background: #0009;
+  background: #0006;
   color: white;
-  backdrop-filter: blur(9px)
+  backdrop-filter: blur(4px)
 }
 
 
 
-#two > img:nth-child(1) {
+
+/* #two > img:nth-child(1) {
   position: absolute;
   left: 0;
   top: -3350px;
   width: 100%;
   filter: brightness(60%);
 }
-
+ */
 #two > .content.box {
   background: #0009;
   color: white;
-  backdrop-filter: blur(9px)  
+  backdrop-filter: blur(4px)  
 }
 
-.content.gallery-main {
+.content-gallery {
   
   margin: 0 !important;
   padding: 0 !important;
@@ -121,13 +158,101 @@ section.main.style3 {
 .fa-youtube > span:nth-child(1) {
 }
 
-section#intro,
-section#one,
-section#two {
+#intro,
+#one,
+#two {
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
 
+#work > .content {
+  margin: 0 1em !important;
+}
+#work .content header,
+#work .content
+{
+  width: 100% !important;
+}
+
+.gallery-grid {
+  max-width: 1450px;
+  margin: auto
+/*   width: 100% !important;
+  display: flex;
+  flex-flow: wrap;
+  margin: auto !important; */
+/*   max-width: max-content; */
+}
+
+
+/* ---- grid ---- */
+
+.grid {
+  display: grid !important;
+  --size: 200px;
+  --size2: calc(var(--size) * 2);
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block !important;
+  clear: both !important;
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+
+  .gallery-grid {
+    width: 100% !important;
+    margin: 0 !important; }
+
+  .grid {
+    display: grid !important;
+    --size: 25vw !important; }
+
+}
+
+
+
+
+/* ---- grid-item ---- */
+
+.grid-item {
+  width: var(--size);
+/*   height: var(--size); */
+/*   height: 250px; */
+/*   min-width: 50%; */
+  
+/*   height: 120px; */
+/*   margin: 4px; */
+/*   border: 2px solid; */
+  float: left !important;
+  margin-bottom: 6px;
+/*   background: #D26; */
+/*   border: 2px solid #333; */
+/*   border-color: hsla(0, 0%, 0%, 0.5); */
+/*   border-radius: 5px; */
+}
+
+
+
+.grid-item-card  {
+/*   background: red */
+}
+/* 
+
+
+.grid-item--width2 { width: 320px; }
+.grid-item--width3 { width: 480px; }
+.grid-item--width4 { width: 640px; }
+
+.grid-item--height2 { height: 200px; }
+.grid-item--height3 { height: 260px; }
+.grid-item--height4 { height: 360px; }
+ */
 
 
 /* .gallery {
