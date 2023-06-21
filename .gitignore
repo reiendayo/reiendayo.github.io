@@ -2,3 +2,14 @@
 *.py
 *.jpg
 *.png
+
+*.bak
+
+/arts/illust/*
+!/arts/illust/preview
+
+/arts/character_design/*
+!/arts/character_design/preview
+
+/arts/comic_sample/*
+!/arts/comic_sample/preview
