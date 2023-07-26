@@ -2,7 +2,6 @@
 /*   --dark : #0a0a0a; */
   --dark : #0e0b0c;
   --light: #fafafa;
-  
   --tip: #62a403;
 }
 
@@ -18,27 +17,37 @@ body {
 
 
 header {
-/*   background: var(--dark); */
-  background: #0e0b0ca0;
-  backdrop-filter: blur(20px) brightness(85%);
+/*   opacity: 0; */
+  background: var(--dark);
+/*   background: #0e0b0ca0; */
+  
+/*   backdrop-filter: blur(20px) brightness(85%); */
   display: flex;
   z-index: 5 !important;
 }
 
 header > h1 {
+/*   display: none; */
   font-family: 'Lisu Bosa';
   letter-spacing: .15em;
+/*   z-index: -2; */
+  z-index: -10;
   flex-grow: 1;
   padding: 0 .5em;
   margin: .25em 0;
+/*   margin: 0; */
   color: #fff6;
+/*   color: #fff0; */
 /*   font-size: 2.5em; */
 }
 
 
-
+header label{
+/*   z-index: 90 !important; */
+}
 header ul {
   display: flex;
+/*   z-index: 90 !important; */
 }
 header ul li {
   margin: 0 1em
@@ -66,7 +75,7 @@ header a:visited {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: -15
+  z-index: -15;
 }
 
 /* .cover > div {
@@ -81,14 +90,26 @@ header a:visited {
 section{
   background: var(--dark);
 }
-section > h1,
-section > h3,
-section h2
+/* section > h1, */
+/* section > h3, */
+/* section h2 */
+.section-title
 {
+  background: var(--dark);
+/*   background: #0000; */
   font-family: 'Lisu Bosa';
   margin: 0;
-  padding: .5em 1em;
-  border-bottom: 1px solid var(--light);
+  padding: .25em;
+  padding-left: .5em ;
+  z-index: 5;
+/*   max-width: min-content; */
+  white-space: nowrap;
+/*   padding: .5em 1em; */
+/*   border-bottom: 1px solid var(--light); */
+  
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .tag-container {
@@ -225,6 +246,7 @@ header
   margin: 0;
   margin-top: 1.5em;
   padding-left: 1.5em;
+  padding-right: 2em;
 }
 .links ul li::marker {
   content: ""
@@ -233,8 +255,11 @@ header
   font-size: 1.5em;
   font-family: 'Lisu Bosa', sans-serif;
   letter-spacing: .1em;
+  width: min-content;
+  padding-bottom: .2em;
+  border-bottom: 1px solid;
   margin: 0;
-  margin-bottom: .25em
+  margin-bottom: .25em;
 }
 
 .links a > :first-child,
