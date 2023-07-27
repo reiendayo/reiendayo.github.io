@@ -1,4 +1,8 @@
 
+function scrollToSection(target){
+  document.getElementById( target ).scrollIntoView({ behavior: 'smooth' });
+};
+
 // Masonry gallery layout
 
 var $gallery = $('.gallery').masonry({

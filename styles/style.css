@@ -27,18 +27,14 @@ header {
 }
 
 header > h1 {
-/*   display: none; */
   font-family: 'Lisu Bosa';
   letter-spacing: .15em;
-/*   z-index: -2; */
   z-index: -10;
   flex-grow: 1;
+  margin: 0;
   padding: 0 .5em;
   margin: .25em 0;
-/*   margin: 0; */
   color: #fff6;
-/*   color: #fff0; */
-/*   font-size: 2.5em; */
 }
 
 
@@ -47,6 +43,7 @@ header label{
 }
 header ul {
   display: flex;
+  margin: 0
 /*   z-index: 90 !important; */
 }
 header ul li {
@@ -56,12 +53,20 @@ header ul li::marker{
   content: ""
 }
 header ul li:hover{
+  border-bottom: 2px solid var(--tip);
+  cursor: pointer;
 /*   border-bottom: 2px solid; */
 }
 header a {
   color: var(--light);
   text-decoration: none;
+  vertical-align: -1em;
+  
+  padding: 0;
+  margin: 0;
 }
+/* header a:hover { */
+/* } */
 header a:visited {
   color: var(--light);
 }

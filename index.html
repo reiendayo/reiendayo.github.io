@@ -25,11 +25,11 @@
     <h1>REIEN</h1>
     <label for="menubar"><i class="bi bi-list"></i></label><input type="checkbox" id="menubar" name="menubar" value="menu">
     <ul>
-      <li><a href="#characters"><span>Character Designs</span></a></li>
-      <li><a href="#characters"><span>Concept Arts</span></a></li>
-      <li><a href="#characters"><span>Illustrations</span></a></li>
-      <li><a href="#characters"><span>Other Works</span></a></li>
-      <li><a href="#characters"><span>Contacts</span></a></li>
+      <li><a onclick="scrollToSection('characters')"><span>Character Designs</span></a></li>
+      <li><a onclick="scrollToSection('concept-art')"><span>Concept Arts</span></a></li>
+      <li><a><span>Illustrations</span></a></li>
+      <li><a><span>Other Works</span></a></li>
+      <li><a onclick="scrollToSection('contacts')"><span>Contacts</span></a></li>
     </ul>
   </header>
   <div id="about">
@@ -128,7 +128,7 @@
       <li><a target="_blank" href="https://www.youtube.com/@reiendayo" rel="nofollow noopener" referrerpolicy="origin"><i class="bi bi-youtube"></i><span>Youtube</span></a></li>
     </ul>
     <ul>
-      <h4>Contacts</h4>
+      <h4 id="contacts">Contacts</h4>
       <li><span><i class="bi bi-discord"></i><span>reien_dayo</span></span></li>
       <li><span><i class="bi bi-envelope-fill"></i><span>reien312312@gmail.com</span></span></li>
     </ul>
