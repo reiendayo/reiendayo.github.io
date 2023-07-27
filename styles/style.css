@@ -224,12 +224,20 @@ header
 #characters > div > div > img{
   max-width: 50%;
 }
+#characters > div > div > img:first-child{
+  margin-left: auto
+}
+#characters > div > div > img:last-child{
+  margin-right: auto
+}
+
 
 #characters div > div {
 /*   display:  none; */
   display: flex;
 /*   flex-grow: 0; */
 /*   flex-shrink: 0; */
+/*   align-items: center; */
   flex-direction: row;
   max-width: 100%;
 }
@@ -297,6 +305,13 @@ footer{
 /* ================================================================== */
 @media only screen and (max-width: 768px) {
 
+  .responsive-col-reverse{
+    flex-direction: column-reverse !important;
+  }
+  
+  
+  
+  
   #menubar{
     display: none;
   }
