@@ -1,5 +1,6 @@
 
 // Masonry gallery layout
+
 var $gallery = $('.gallery').masonry({
   itemSelector: '.gallery-item',
   columnWidth: '.gallery-item',
@@ -11,4 +12,11 @@ var $gallery = $('.gallery').masonry({
 
 $gallery.imagesLoaded().progress( function() {
   $gallery.masonry('layout');
+});
+
+// Viewer
+
+new VenoBox({
+  selector: '.view-item',
+  spinner: 'wander'
 });

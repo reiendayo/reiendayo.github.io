@@ -270,14 +270,21 @@ header
   padding: .25em 1em;
   margin: auto
 }
-#characters > div > div > img{
-  max-width: 50%;
+/* #characters > div > div > img{ */
+#characters > div > div a {
+/*   display: block !important; */
+/*   max-width: 100%; */
 }
-#characters > div > div > img:first-child{
-  margin-left: auto
+#characters > div > div img{
+  max-width: 100%;
 }
-#characters > div > div > img:last-child{
-  margin-right: auto
+/* #characters > div > div > img:first-child{ */
+#characters > div > div a:first-child{
+/*   margin-left: auto */
+}
+/* #characters > div > div > img:last-child{ */
+#characters > div > div a:last-child{
+/*   margin-right: auto */
 }
 
 
