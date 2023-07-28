@@ -1,4 +1,10 @@
 
+window.addEventListener("scroll", function() {
+  var elementTarget = document.getElementById("characters");
+  document.getElementById('bonds-banner').classList.toggle( "fixed-hidden",
+    (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight)) )
+});
+
 function scrollToSection(target){
   document.getElementById( target ).scrollIntoView({ behavior: 'smooth' });
 };
