@@ -10,14 +10,62 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Reien</title>
   <link rel="icon" type="image/x-icon" href="icon.ico">
+  <script type="text/javascript">
+    function fallback(elem,type,newsrc){
+      elem.onerror = null;
+      switch(type){
+        case "css":
+          var link = document.createElement('link');
+          link.type = 'text/css';
+          link.rel = 'stylesheet';
+          link.href = newsrc;
+          document.head.appendChild(link);
+          break;
+        case "js":
+          var script = document.createElement('script');
+          script.src = newsrc;
+          document.head.appendChild(script);
+          break;
+        case "src":
+          elem.setAttribute('src',newsrc);
+          break;
+      }
+      console.log('fallback to: ',newsrc);
+    };
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"
+    onerror="fallback(this,'js','vendor/jquery/jquery-3.7.0.min.js')"></script>
+
   <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/reiendayo/reiendayo.github.io@img/arts/cover.webp">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/venobox@2.0.4/dist/venobox.min.css">
+
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+    onerror="fallback(this,'css','vendor/normalize/normalize.min.css')">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css"
+    onerror="fallback(this,'css','vendor/bootstrap-icons/bootstrap-icons.min.css')">
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/venobox@2.0.4/dist/venobox.min.css"
+    onerror="fallback(this,'css','vendor/venobox/venobox.min.css')">
+
   <link rel="stylesheet" href="styles/style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lisu+Bosa:wght@300&amp;family=Montserrat:wght@300&amp;display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"
+    onerror="fallback(this,'js','vendor/imagesloaded/imagesloaded.pkgd.min.js');"></script>
+
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"
+    onerror="fallback(this,'js','vendor/masonry/masonry.pkgd.min.js');"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/venobox@2.0.4/dist/venobox.min.js"
+    onerror="fallback(this,'js','vendor/venobox/venobox.min.js');"></script>
+
+  <script src="scripts/script.js"></script>
+
 </head>
 
 <body>
@@ -136,11 +184,6 @@
   <footer>
     <div>© 2023 REIEN</div>
   </footer>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/venobox@2.0.4/dist/venobox.min.js"></script>
-  <script src="scripts/script.js"></script>
 </body>
 
 </html>
