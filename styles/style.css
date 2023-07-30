@@ -357,6 +357,56 @@ hr.hs-s {
   
 }
 
+.comic-bg {
+/*   display: ;
+  position: absolute;
+  height: 100%; */
+}
+
+#other-works {
+  padding-bottom: 1em
+}
+#other-works > div{
+  display: flex;
+  flex-wrap: wrap
+}
+
+#other-works > div > div{
+  display: flex;
+}
+
+#other-works > div > div p{
+  max-width: 200px;
+  font-size: 1.2em
+}
+#other-works .comic-1 {
+  background: white;
+  border-radius: 8px;
+  min-width: 240px;
+  margin: 2em;
+  padding-bottom: 1em;
+  overflow: hidden
+  
+}
+#other-works .comic-1 a {
+  display: flex;
+  flex-direction: column;
+  color: green;
+  font-size: 1.5em;
+  text-decoration: none;
+/*   margin: .2em */
+  text-indent: .5em;
+  font-weight: bold;
+/*   margin-top: 1em; */
+/*   min-width: 260px */
+}
+#other-works .comic-1 img {
+/*   min-width: 240px; */
+  max-width: 240px;
+  margin-bottom: .25em
+/*   filter: blur(1px); */
+}
+
 
 .links {
   padding-top: 5em;
@@ -485,6 +535,19 @@ footer{
   flex-direction: column;
   }
   
+#other-works > div > div{
+/*     margin-top: -2em; */
+  
+  flex-wrap: wrap;
+}
+  #other-works .comic-1 {
+    margin-bottom: 1em;
+  }
+  #other-works > div > div p {
+/*     padding-top:0; */
+    margin: 2em;
+    margin-top: 0;
+  }
   
   
 .links {
