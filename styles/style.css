@@ -471,7 +471,7 @@ footer{
 /* ================================================================== */
 @media only screen and (max-width: 768px) {
 
-  .responsive-col-reverse{
+/*  .responsive-col-reverse{
     flex-direction: column-reverse !important;
   }
   
@@ -503,7 +503,7 @@ footer{
   }
   header ul li {
     margin: 1em ;
-  }
+  }*/
   
   #about{
     text-align: left;
@@ -567,3 +567,40 @@ footer{
 
 
 
+/* ================================================================== */
+@media only screen and (max-width: 810px) {
+
+    .responsive-col-reverse{
+    flex-direction: column-reverse !important;
+  }
+  
+  
+  
+  
+  #menubar{
+    display: none;
+  }
+  input#menubar:not(:checked) + ul {
+    display: none
+  }
+  label[for="menubar"]{
+    display: block;
+    font-size: 2em;
+    margin: .25em;
+    margin-right: .3em;
+  }
+  label[for="menubar"]:hover{
+    cursor: pointer
+  }
+  header ul {
+    display: block;
+    position: absolute;
+    background: var(--dark);
+    width: 100vw;
+    margin-top:3.2em;
+    padding-left: 0;
+  }
+  header ul li {
+    margin: 1em ;
+  }
+}
