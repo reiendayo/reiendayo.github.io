@@ -337,7 +337,7 @@ header
   width: 250px;
   max-width: 50%;
 }
-.gallery.g-0 + .hs-s {
+.gallery.g-comm + .hs-s {
   margin: auto !important;
 }
 .hs-m {
