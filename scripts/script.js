@@ -79,6 +79,10 @@ var $g_0 = $('.g-0').masonry(masonry_options);
 $g_0.imagesLoaded().progress( function() {
   $g_0.masonry('layout'); });
 
+var $g_comm = $('.g-comm').masonry(masonry_options);
+$g_comm.imagesLoaded().progress( function() {
+  $g_comm.masonry('layout'); });
+
 
 //     masonry_init = true;
 //   } else { console.log('masonry init failed'); }
