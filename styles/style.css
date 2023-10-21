@@ -1,12 +1,42 @@
 :root{
 /*   --dark : #0a0a0a; */
 /*  --dark : #0e0b0c;*/
-  --dark : #000;
+/*   --dark : #020902; */
+  --dark : #100f10;
+  --dark-l : #101110;
+/*   --dark-l : #080908 ; */
+  
   --light: #fafafa;
-  --tip: #62a403;
+/*   --tip: #62a403; */
+  --tip: #70be04;
+/*   --tip: red; */
+  
+}
+html{
+  scroll-behavior:smooth !important;
 }
 
+.hidden {
+  display: none
+}
+.sticky-visible{
+  display: block !important;
+}
 
+#back-to-top{
+  color: var(--tip);
+  display: none;
+  position: fixed;
+  top: .6em;
+  right: 0;
+  z-index: 99;
+  
+}
+#back-to-top .bi {
+  margin: 1em;
+/*   height: 50px !important; */
+  font-size: 30px;
+}
 
 body {
  color:var(--light);
@@ -96,6 +126,13 @@ header a:visited {
 
 section{
   background: var(--dark);
+/*   display: block !important; */
+  position: relative;
+}
+section:not(#intro){
+  
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 /* section > h1, */
 /* section > h3, */
@@ -103,20 +140,27 @@ section{
 .section-title
 {
   background: var(--dark);
-/*   background: #0000; */
+  background: var(--dark-l);
   font-family: 'Lisu Bosa';
   margin: 0;
+/*   text-shadow: 2px 2px 2px var(--dark); */
+/*   margin-bottom: 1em ; */
   padding: .25em;
   padding-left: .5em ;
-  z-index: 5;
+  z-index: 10;
+  box-shadow: 0 .1em 1em #000;
+  font-weight: lighter;
 /*   max-width: min-content; */
   white-space: nowrap;
 /*   padding: .5em 1em; */
+  border-bottom: 1px solid #fff8;
 /*   border-bottom: 1px solid var(--light); */
+/*   border-top: 1px solid var(--light); */
   
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: -1px;
+  letter-spacing: .15ch;
 }
 
 .tag-container {
@@ -228,6 +272,7 @@ header
     ;
   background-repeat: no-repeat;
   background-position: center;
+/*   backdrop-filter: blur(55px); */
   
   font-size: 5em;
   font-weight: lighter;
@@ -353,7 +398,8 @@ header
 }
 .section-desc {
   padding: 1em 2em;
-  padding-bottom: 2em
+  padding-bottom: 2em;
+  padding-top: 0
 }
 .section-desc p {
   margin: 0;
@@ -387,41 +433,64 @@ hr.hs-f {
 }
 #other-works > div:not(.g-comm,.section-desc){
   display: flex;
+/*   align-items: flex-start; */
   flex-wrap: wrap;
+  max-width: 980px;
+  margin: auto
+  
 }
 
-#other-works > div:not(.g-comm,.section-desc) > div{
+#other-works > div:not(.g-comm,.section-desc) > div {
   display: flex;
+/*   max-width: 200px */
+  
 }
 
 #other-works > div:not(.g-comm,.section-desc) > div p{
-  max-width: 200px;
-  font-size: 1.2em
+  max-width: 180px;
+  text-align: left
+/*   font-size: 1em; */
 }
 #other-works .comic-1 {
-  background: white;
-  border-radius: 8px;
-  min-width: 240px;
-  margin: 2em;
-  padding-bottom: 1em;
+/*   background: white; */
+/*   background: #222; */
+  border-radius: 4px;
+/*   min-width: 240px; */
+  max-width: 250px;
+  margin: 1.7em;
+/*   min-height: 360px; */
+/*   outline: 1px solid var(--tip); */
+/*   padding-bottom: 1em; */
   overflow: hidden
   
 }
 #other-works .comic-1 a {
-  display: flex;
-  flex-direction: column;
-  color: green;
+/*   display: flex; */
+/*   flex-direction: column; */
+/*   background: white; */
+/*   width: 100%; */
+ 
+  color: var(--tip);
   font-size: 1.5em;
-  text-decoration: none;
+/*   text-decoration: none; */
 /*   margin: .2em */
   text-indent: .5em;
   font-weight: bold;
+  
 /*   margin-top: 1em; */
 /*   min-width: 260px */
 }
+#other-works .comic-1 a span {
+  display: none !important;
+/*   white-space: normal !important; */
+/*   flex-wrap: wrap !important; */
+}
+
 #other-works .comic-1 img {
+  
 /*   min-width: 240px; */
-  max-width: 240px;
+/*   max-width: 240px; */
+  width: 100%;
   margin-bottom: .25em
 /*   filter: blur(1px); */
 }
@@ -486,6 +555,11 @@ footer{
   opacity: 0;
 }
 
+.game-itm{
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
 
   #menubar, label[for="menubar"]{
     display: none;
@@ -582,11 +656,54 @@ footer{
 
 
 
+#content-border + .section-title {
+  z-index: 10;
+}
+#characters {
+  z-index: 9;
+}
+
+
+#characters + .section-title {
+  z-index: 12;
+}
+#concept-art {
+  z-index: 11;
+}
+
+
+#concept-art + .section-title {
+  z-index: 13;
+}
+#illustrations {
+  z-index: 12;
+}
+
+
+#illustrations + .section-title {
+  z-index: 14;
+}
+#other-works {
+  z-index: 13;
+}
 
 
 
 
-
+/* ================================================================== */
+@media only screen and (min-width: 1200px) {
+  
+  section .gallery-item:hover {
+    transition: .2s ease-in-out;
+    transform: scale(1.1);
+    z-index: 10;
+  }
+  section .gallery-item:not(:hover) {
+    transition: .1s ease-in-out;
+    transform: scale(1) ;
+  }
+  
+}
 
 
 /* ================================================================== */
